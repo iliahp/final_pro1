@@ -26,7 +26,7 @@ class Teacher(Person):
 
     @study.setter
     def study(self, study):
-        self._name = Validator.name_validator(study, "invalid study ")
+        self._study = study
 
     @property
     def skill(self):

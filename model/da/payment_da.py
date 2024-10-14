@@ -17,14 +17,12 @@ class PaymentDa:
 
     def save(self, payment):
         self.connect()
-        # todo : complete sql command and parameters
         self.cursor.execute("insert into payment_tbl (select_course_id, amount, description) values (%s,%s,%s)",
                             [Payment.select_course, Payment.amount, Payment.description])
         self.disconnect(commit=True)
 
     def edit(self, payment):
         self.connect()
-        # todo : complete sql command and parameters
         self.cursor.execute("update payment_tbl set    where id=%s",
                             [Payment.select_course_id, Payment.amount, Payment.description, Payment.id])
         self.disconnect(commit=True)

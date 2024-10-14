@@ -16,4 +16,4 @@ class Student(Person):
 
     @grade.setter
     def grade(self, grade):
-        self._grade = Validator.grade_validator(grade, "invalid grade ")
+       self._grade = grade
